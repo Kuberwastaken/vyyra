@@ -1,5 +1,5 @@
 
-import { Bot, SoundWave, MagicWand, Download } from 'lucide-react';
+import { Bot, AudioWaveform, Wand2, Download } from 'lucide-react';
 
 const bentoItems = [
   {
@@ -14,7 +14,7 @@ const bentoItems = [
     id: 2,
     title: "Your Voice, Amplified",
     description: "Vyyra retains your tone, voice, and content rhythm.",
-    icon: SoundWave,
+    icon: AudioWaveform,
     className: "md:col-span-1 md:row-span-2",
     gradient: "from-blue-500/10 to-cyan-500/10"
   },
@@ -22,7 +22,7 @@ const bentoItems = [
     id: 3,
     title: "Zero Effort Publishing",
     description: "No writing or formatting — just connect your socials and get the newsletter.",
-    icon: MagicWand,
+    icon: Wand2,
     className: "md:col-span-1 md:row-span-1",
     gradient: "from-purple-500/10 to-pink-500/10"
   },
