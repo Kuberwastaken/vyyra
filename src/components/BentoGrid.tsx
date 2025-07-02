@@ -54,12 +54,12 @@ const BentoGrid = () => {
           return (
             <div
               key={item.id}
-              className={`bento-card group cursor-pointer ${item.className} bg-gradient-to-br ${item.gradient}`}
+              className={`bento-card group cursor-pointer ${item.className} bg-white/80 border border-gray-300/50`}
             >
               <div className="flex flex-col h-full">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="p-3 rounded-2xl bg-white/80 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                    <IconComponent className="w-6 h-6 text-purple-600" />
+                  <div className="p-3 rounded-2xl bg-gray-100 border border-gray-200 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                    <IconComponent className="w-6 h-6 text-black" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800">
                     {item.title}
@@ -69,7 +69,7 @@ const BentoGrid = () => {
                   {item.description}
                 </p>
                 <div className="mt-6 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                  <div className="h-1 w-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full"></div>
+                  <div className="h-1 w-12 bg-black rounded-full"></div>
                 </div>
               </div>
             </div>

@@ -23,13 +23,13 @@ const Hero = () => {
   }, [displayText, isTyping, newsletterTitle]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
-      {/* Floating polka dots */}
+    <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden pt-16">
+      {/* Floating dots */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(12)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-2 h-2 bg-purple-300/30 rounded-full animate-float"
+            className="absolute w-2 h-2 bg-black/20 rounded-full animate-float"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -41,6 +41,11 @@ const Hero = () => {
       </div>
 
       <div className="text-center max-w-6xl mx-auto relative z-10">
+        {/* Cool tagline */}
+        <div className="tagline-font text-lg md:text-xl italic text-gray-600 mb-4">
+          "Where scattered thoughts become structured stories"
+        </div>
+
         {/* Main headline */}
         <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
           From Posts to{' '}
@@ -49,7 +54,7 @@ const Hero = () => {
         
         <div className="text-lg md:text-xl mb-4 text-gray-600">
           Let Your Social Media Speak in{' '}
-          <span className="font-semibold text-purple-600">Volumes</span>
+          <span className="font-semibold text-black">Volumes</span>
         </div>
 
         {/* Subheadline */}
@@ -61,7 +66,7 @@ const Hero = () => {
         {/* CTA Button */}
         <Button 
           size="lg" 
-          className="text-lg px-8 py-6 rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105"
+          className="text-lg px-8 py-6 rounded-2xl bg-black hover:bg-gray-800 text-white shadow-2xl hover:shadow-black/25 transition-all duration-300 hover:scale-105"
         >
           Generate My First Issue →
         </Button>
@@ -69,9 +74,9 @@ const Hero = () => {
         {/* Newsletter Preview Animation */}
         <div className="mt-16 mx-auto max-w-md">
           <div className="glass-card rounded-3xl p-6 shadow-2xl">
-            <div className="bg-white rounded-2xl p-4 mb-4">
+            <div className="bg-white rounded-2xl p-4 mb-4 border border-gray-200">
               <div className="h-3 bg-gray-200 rounded mb-2"></div>
-              <div className="text-lg font-semibold mb-2 border-r-2 border-purple-600 pr-1 overflow-hidden whitespace-nowrap">
+              <div className="text-lg font-semibold mb-2 border-r-2 border-black pr-1 overflow-hidden whitespace-nowrap">
                 {displayText}
                 {isTyping && <span className="animate-blink">|</span>}
               </div>

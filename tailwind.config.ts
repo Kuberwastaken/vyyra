@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -21,6 +20,7 @@ export default {
 		extend: {
 			fontFamily: {
 				'sans': ['DM Sans', 'system-ui', 'sans-serif'],
+				'serif': ['Playfair Display', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -115,6 +115,23 @@ export default {
 				'scroll': {
 					'0%': { transform: 'translateY(0)' },
 					'100%': { transform: 'translateY(-50%)' }
+				},
+				'polka-float': {
+					'0%': {
+						transform: 'translateY(0px) translateX(0px)'
+					},
+					'25%': {
+						transform: 'translateY(-10px) translateX(5px)'
+					},
+					'50%': {
+						transform: 'translateY(-5px) translateX(-3px)'
+					},
+					'75%': {
+						transform: 'translateY(-15px) translateX(2px)'
+					},
+					'100%': {
+						transform: 'translateY(0px) translateX(0px)'
+					}
 				}
 			},
 			animation: {
@@ -124,7 +141,8 @@ export default {
 				'typewriter': 'typewriter 3s steps(30) 1s forwards',
 				'blink': 'blink 1s infinite',
 				'float': 'float 3s ease-in-out infinite',
-				'scroll': 'scroll 10s linear infinite'
+				'scroll': 'scroll 10s linear infinite',
+				'polka-float': 'polka-float 20s linear infinite'
 			},
 			backgroundImage: {
 				'polka-dots': 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.05) 1px, transparent 0)'
