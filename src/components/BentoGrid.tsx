@@ -23,7 +23,7 @@ const bentoItems = [
     title: "Zero Effort Publishing",
     description: "No writing or formatting — just connect your socials and get the newsletter.",
     icon: Wand2,
-    className: "md:col-span-1 md:row-span-1",
+    className: "md:col-span-2 md:row-span-1",
     gradient: "from-gray-500/10 to-gray-600/10"
   },
   {
