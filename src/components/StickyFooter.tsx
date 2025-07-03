@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
-import { Button } from '@/components/ui/button';
-import { X } from 'lucide-react';
+import { useState, useEffect, useRef } from "react";
+import { Button } from "@/components/ui/button";
+import { X } from "lucide-react";
 
 const StickyFooter = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,10 +15,10 @@ const StickyFooter = () => {
         setIsVisible(scrollPosition > windowHeight * 0.8);
       }
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     // Initial check in case user already scrolled
     handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleClose = () => {
@@ -29,7 +29,10 @@ const StickyFooter = () => {
   if (!isVisible) return null;
 
   return (
-    <div id="pricing" className="fixed bottom-0 left-0 right-0 z-50 p-4 animate-fade-in">
+    <div
+      id="pricing"
+      className="fixed bottom-0 left-0 right-0 z-50 p-4 animate-fade-in"
+    >
       <div className="glass-card rounded-2xl p-4 shadow-2xl max-w-md mx-auto border border-gray-200/50">
         <div className="flex items-center justify-between gap-4">
           <div className="flex-1">
