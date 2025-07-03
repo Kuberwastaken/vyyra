@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -41,21 +40,11 @@ const Hero = () => {
       </div>
 
       <div className="text-center max-w-6xl mx-auto relative z-10">
-        {/* Cool tagline */}
-        <div className="tagline-font text-lg md:text-xl italic text-gray-600 mb-4">
-          "Where scattered thoughts become structured stories"
-        </div>
-
-        {/* Main headline */}
-        <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
-          From Posts to{' '}
-          <span className="gradient-text">Publications</span>
+        {/* Main tagline - now the biggest element */}
+        <h1 className="tagline-font text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold mb-8 leading-tight text-gray-800">
+          "Where scattered thoughts<br />
+          become <span className="gradient-text">structured stories</span>"
         </h1>
-        
-        <div className="text-lg md:text-xl mb-4 text-gray-600">
-          Let Your Social Media Speak in{' '}
-          <span className="font-semibold text-black">Volumes</span>
-        </div>
 
         {/* Subheadline */}
         <p className="text-xl md:text-2xl text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed">
