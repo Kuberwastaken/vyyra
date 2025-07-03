@@ -8,7 +8,7 @@ const bentoItems = [
     description: "Curated by multiple agents analyzing your content style and sentiment.",
     icon: Bot,
     className: "md:col-span-2 md:row-span-1",
-    gradient: "from-purple-500/10 to-blue-500/10"
+    gradient: "from-gray-500/10 to-gray-600/10"
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const bentoItems = [
     description: "Vyyra retains your tone, voice, and content rhythm.",
     icon: AudioWaveform,
     className: "md:col-span-1 md:row-span-2",
-    gradient: "from-blue-500/10 to-cyan-500/10"
+    gradient: "from-gray-600/10 to-gray-700/10"
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const bentoItems = [
     description: "No writing or formatting — just connect your socials and get the newsletter.",
     icon: Wand2,
     className: "md:col-span-1 md:row-span-1",
-    gradient: "from-purple-500/10 to-pink-500/10"
+    gradient: "from-gray-500/10 to-gray-600/10"
   },
   {
     id: 4,
@@ -32,13 +32,13 @@ const bentoItems = [
     description: "PDF, HTML, Substack-ready formats in one click.",
     icon: Download,
     className: "md:col-span-2 md:row-span-1",
-    gradient: "from-green-500/10 to-blue-500/10"
+    gradient: "from-gray-600/10 to-gray-700/10"
   }
 ];
 
 const BentoGrid = () => {
   return (
-    <section className="py-24 px-4 max-w-7xl mx-auto">
+    <section id="features" className="py-24 px-4 max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
           How <span className="gradient-text">Vyyra</span> Works

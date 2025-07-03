@@ -59,7 +59,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-24 px-4 bg-gradient-to-br from-purple-50/50 to-blue-50/50">
+    <section id="testimonials" className="py-24 px-4 bg-gradient-to-br from-gray-50/50 to-gray-100/50">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
           Loved by <span className="gradient-text">Creators</span>
@@ -120,7 +120,7 @@ const Testimonials = () => {
                       setIsAutoPlaying(false);
                     }}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      index === currentIndex ? 'bg-purple-600 w-8' : 'bg-gray-300'
+                      index === currentIndex ? 'bg-black w-8' : 'bg-gray-300'
                     }`}
                   />
                 ))}

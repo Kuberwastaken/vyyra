@@ -94,7 +94,7 @@ export default {
 				'fade-in': {
 					'0%': {
 						opacity: '0',
-						transform: 'translateY(10px)'
+						transform: 'translateY(20px)'
 					},
 					'100%': {
 						opacity: '1',
@@ -137,7 +137,7 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.6s ease-out',
+				'fade-in': 'fade-in 0.8s ease-out forwards',
 				'typewriter': 'typewriter 3s steps(30) 1s forwards',
 				'blink': 'blink 1s infinite',
 				'float': 'float 3s ease-in-out infinite',

@@ -26,13 +26,34 @@ const TopNav = () => {
         </div>
         
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#features" className="text-gray-600 hover:text-black transition-colors">
+          <a 
+            href="#features" 
+            className="text-gray-600 hover:text-black transition-colors cursor-pointer"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
             Features
           </a>
-          <a href="#testimonials" className="text-gray-600 hover:text-black transition-colors">
+          <a 
+            href="#testimonials" 
+            className="text-gray-600 hover:text-black transition-colors cursor-pointer"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
             Testimonials
           </a>
-          <a href="#pricing" className="text-gray-600 hover:text-black transition-colors">
+          <a 
+            href="#pricing" 
+            className="text-gray-600 hover:text-black transition-colors cursor-pointer"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            }}
+          >
             Pricing
           </a>
         </div>

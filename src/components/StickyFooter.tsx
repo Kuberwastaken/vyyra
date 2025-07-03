@@ -22,7 +22,7 @@ const StickyFooter = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 animate-fade-in">
+    <div id="pricing" className="fixed bottom-0 left-0 right-0 z-50 p-4 animate-fade-in">
       <div className="glass-card rounded-2xl p-4 shadow-2xl max-w-md mx-auto border border-gray-200/50">
         <div className="flex items-center justify-between gap-4">
           <div className="flex-1">

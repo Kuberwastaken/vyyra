@@ -39,7 +39,7 @@ const NewsletterPreview = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="flex items-start gap-4">
-              <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+              <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center text-white font-bold text-sm">
                 1
               </div>
               <div>
@@ -49,7 +49,7 @@ const NewsletterPreview = () => {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+              <div className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center text-white font-bold text-sm">
                 2
               </div>
               <div>
@@ -59,7 +59,7 @@ const NewsletterPreview = () => {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+              <div className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
                 3
               </div>
               <div>
@@ -76,7 +76,7 @@ const NewsletterPreview = () => {
                 style={{ transform: `translateY(-${scrollY * 2}px)` }}
               >
                 {/* Newsletter Header */}
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-6 rounded-2xl mb-6">
+                <div className="bg-gradient-to-r from-gray-800 to-black text-white p-6 rounded-2xl mb-6">
                   <h1 className="text-2xl font-bold mb-2">The Weekly Digest</h1>
                   <p className="opacity-90">November Edition • Curated by AI</p>
                 </div>
