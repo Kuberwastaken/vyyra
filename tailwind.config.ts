@@ -132,7 +132,15 @@ export default {
 					'100%': {
 						transform: 'translateY(0px) translateX(0px)'
 					}
-				}
+				},
+				'border-trace': {
+					'0%': { borderColor: 'rgba(0,0,0,0.0)', boxShadow: '0 0 0 0 rgba(0,0,0,0)' },
+					'10%': { borderTopColor: 'rgba(0,0,0,0.6)' },
+					'30%': { borderRightColor: 'rgba(0,0,0,0.6)' },
+					'60%': { borderBottomColor: 'rgba(0,0,0,0.6)' },
+					'90%': { borderLeftColor: 'rgba(0,0,0,0.6)' },
+					'100%': { borderColor: 'rgba(0,0,0,0.6)', boxShadow: '0 0 16px 2px rgba(0,0,0,0.15)' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -142,7 +150,8 @@ export default {
 				'blink': 'blink 1s infinite',
 				'float': 'float 3s ease-in-out infinite',
 				'scroll': 'scroll 10s linear infinite',
-				'polka-float': 'polka-float 20s linear infinite'
+				'polka-float': 'polka-float 20s linear infinite',
+				'border-trace': 'border-trace 1.2s cubic-bezier(0.4,0,0.2,1) forwards',
 			},
 			backgroundImage: {
 				'polka-dots': 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.05) 1px, transparent 0)'

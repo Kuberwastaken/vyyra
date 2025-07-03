@@ -40,3 +40,77 @@
 .read-the-docs {
   color: #888;
 }
+
+@keyframes border-trace {
+  0% {
+    border-top-color: #888;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  25% {
+    border-top-color: #888;
+    border-right-color: #888;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  50% {
+    border-top-color: #888;
+    border-right-color: #888;
+    border-bottom-color: #888;
+    border-left-color: transparent;
+  }
+  75% {
+    border-top-color: #888;
+    border-right-color: #888;
+    border-bottom-color: #888;
+    border-left-color: #888;
+  }
+  100% {
+    border-color: #888;
+    box-shadow: 0 0 8px 2px #888;
+  }
+}
+
+.animate-border-trace {
+  animation: border-trace 0.8s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+/* --- BentoGrid Enhancements --- */
+.bento-section-bg {
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+}
+.animated-gradient-border {
+  border-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%) 1;
+}
+.bento-card:hover,
+.bento-card:focus {
+  /* Reduce scale and rotation on hover */
+  transform: scale(1.012) rotate(-0.5deg) !important;
+}
+.bento-card:hover .animated-gradient-border,
+.bento-card:focus .animated-gradient-border {
+  border-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%) 1;
+}
+.icon-float .icon-float {
+  animation: floatIcon 2.5s ease-in-out infinite;
+}
+@keyframes floatIcon {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+.pulse {
+  animation: pulseCard 0.22s cubic-bezier(0.4,0,0.2,1);
+}
+@keyframes pulseCard {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.025); }
+  100% { transform: scale(1); }
+}
+/* Optional: subtle glassmorphism tweaks */
+.bento-card {
+  background: rgba(255,255,255,0.65);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.10);
+  backdrop-filter: blur(16px);
+}
