@@ -1,23 +1,30 @@
-
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react';
 
 const StickyFooter = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const closedRef = useRef(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const windowHeight = window.innerHeight;
-      
-      // Show sticky footer after scrolling past the hero section
-      setIsVisible(scrollPosition > windowHeight * 0.8);
+      // Only show if not closed in this session
+      if (!closedRef.current) {
+        setIsVisible(scrollPosition > windowHeight * 0.8);
+      }
     };
-
     window.addEventListener('scroll', handleScroll);
+    // Initial check in case user already scrolled
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleClose = () => {
+    setIsVisible(false);
+    closedRef.current = true;
+  };
 
   if (!isVisible) return null;
 
@@ -40,7 +47,7 @@ const StickyFooter = () => {
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => setIsVisible(false)}
+              onClick={handleClose}
               className="rounded-xl hover:bg-gray-100"
             >
               <X className="w-4 h-4" />
