@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -15,12 +14,12 @@ const TopNav = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-white/80 backdrop-blur-md shadow-lg border-b border-gray-200/50' 
-        : 'bg-transparent'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 right-0 z-50">
+      <div className={`mx-auto px-4 h-16 flex items-center justify-between transition-all duration-500 ease-in-out ${
+        isScrolled 
+          ? 'max-w-4xl rounded-2xl bg-white/60 backdrop-blur-md shadow-xl border border-gray-200/30 mt-2 mb-2' 
+          : 'max-w-7xl'
+      }`}>
         <div className="text-2xl font-bold">
           Vyyra
         </div>
