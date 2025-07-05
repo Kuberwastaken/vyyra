@@ -1,6 +1,6 @@
 # Vyyra
 
-**Vyyra** is an AI-powered platform that transforms your scattered social media posts into a beautifully formatted, professional monthly newsletter—automatically and in your own voice.
+**Vyyra** is a kewl project
 
 ---
 
