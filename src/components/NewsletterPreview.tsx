@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Dialog, DialogTrigger, DialogContent } from '@/components/ui/dialog';
+import { Dialog, DialogTrigger, DialogContent, DialogClose } from '@/components/ui/dialog';
 import { Maximize2, X as CloseIcon } from 'lucide-react';
 
 const Section = ({ title, icon, children }) => (
@@ -193,13 +193,15 @@ const NewsletterPreview = () => {
                 </DialogTrigger>
                 <DialogContent className="max-w-[85vw] w-[85vw] h-[90vh] p-0 flex flex-col items-center justify-center bg-transparent border-none shadow-none">
                   <div className="relative w-full h-full flex flex-col">
-                    <button
-                      className="absolute top-4 right-4 z-10 bg-gray-100 hover:bg-gray-200 rounded-full p-2 shadow"
-                      aria-label="Close expanded newsletter"
-                      data-close="true"
-                    >
-                      <CloseIcon className="w-5 h-5 text-gray-600" />
-                    </button>
+                    <DialogClose asChild>
+                      <button
+                        className="absolute top-4 right-4 z-10 bg-gray-100 hover:bg-gray-200 rounded-full p-2 shadow"
+                        aria-label="Close expanded newsletter"
+                        data-close="true"
+                      >
+                        <CloseIcon className="w-5 h-5 text-gray-600" />
+                      </button>
+                    </DialogClose>
                     <div className="overflow-y-auto w-full h-full flex-1 flex justify-center items-start pt-8 pb-8">
                       <div className="w-full max-w-3xl">{NewsletterFullContent}</div>
                     </div>
